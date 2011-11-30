@@ -1,0 +1,15 @@
+.first-col a h1.name, 
+.logo, 
+.nav-container,
+.main-content a h1,
+.sidebar a h1,
+.intro-welcome a h1  
+{
+	background-color:#111;
+} 
+
+.main-content a,
+.comments a,
+.twitter-text a { 
+	color:#111;
+}
