@@ -18718,3 +18718,39 @@
 2011-11-30 08:38:59 Error: [MissingControllerException] Controller class CssController could not be found.
 #0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2011-11-30 11:21:40 Error: [MissingPluginException] Plugin TinyMce could not be found.
+#0 /var/www/cake.labs/trust.cms/lib/Cake/Core/App.php(392): CakePlugin::path('TinyMce')
+#1 /var/www/cake.labs/trust.cms/lib/Cake/Core/App.php(216): App::pluginPath('TinyMce')
+#2 /var/www/cake.labs/trust.cms/lib/Cake/Core/App.php(566): App::path('View/Helper', 'TinyMce')
+#3 [internal function]: App::load('TinyMceHelper')
+#4 [internal function]: spl_autoload_call('TinyMceHelper')
+#5 /var/www/cake.labs/trust.cms/lib/Cake/View/HelperCollection.php(75): class_exists('TinyMceHelper')
+#6 /var/www/cake.labs/trust.cms/lib/Cake/View/View.php(577): HelperCollection->load('TinyMce.TinyMce', NULL)
+#7 /var/www/cake.labs/trust.cms/lib/Cake/View/View.php(359): View->loadHelpers()
+#8 /var/www/cake.labs/trust.cms/app/Plugin/debug_kit/View/DebugView.php(82): View->render(NULL, NULL)
+#9 /var/www/cake.labs/trust.cms/lib/Cake/Controller/Controller.php(901): DebugView->render(NULL, NULL)
+#10 /var/www/cake.labs/trust.cms/lib/Cake/Routing/Dispatcher.php(113): Controller->render()
+#11 /var/www/cake.labs/trust.cms/lib/Cake/Routing/Dispatcher.php(88): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2011-11-30 11:50:38 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 11:50:43 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 11:50:44 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 11:50:46 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 11:50:48 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 11:50:49 Error: [MissingControllerException] Controller class TinyMceController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-11-30 13:30:46 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/cake.labs/trust.cms/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

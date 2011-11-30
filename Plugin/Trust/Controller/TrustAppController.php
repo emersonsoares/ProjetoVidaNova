@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 class TrustAppController extends AppController {
 
     public $components = array('Auth', 'Session', 'DebugKit.Toolbar');
-    public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time');
+    public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time', 'TinyMce');
 
     function beforeFilter() {
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'plugin' => 'trust');

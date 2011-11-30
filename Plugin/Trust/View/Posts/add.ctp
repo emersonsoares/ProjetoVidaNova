@@ -1,10 +1,16 @@
+<?php
+$this->TinyMce->editor(array(
+    'theme' => 'advanced',
+    'mode' => 'textareas'
+));
+?>
 <div class="posts form">
     <?php echo $this->Form->create('Post', array('enctype' => 'multipart/form-data')); ?>
     <fieldset>
         <legend><?php echo __('Add Post'); ?></legend>
         <?php
         echo $this->Form->input('title');
-        echo $this->Form->input('content');
+        echo $this->Form->input('content', array('id' => 'mce_advanced'));
         echo $this->Form->input('alternative_content', array('type' => 'textarea'));
         echo $this->Form->input('status', array(
             'options' => array('Active' => 'Active', 'Inactive' => 'Inactive'),
