@@ -1642,6 +1642,32 @@ div.dropdown-slider .ddm:last-child {
     font:14px/20px ShantiRegular, Arial, Sans;        
 }
 
+.post-entry img {
+    border: 5px white solid; /* Fallback for rgba */
+    margin: 0 10px 5px 0;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    max-width:600px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.1) inset;
+    position:relative;
+    display:block;
+    float: left;
+}
+
+.post-entry img:hover {
+    transition:ease-out .5s;
+    -webkit-transition:ease-out .5s;
+    -moz-transition:ease-out .5s;
+    -o-transition:ease-out .5s;
+    border: 5px white solid; /* Fallback for rgba */
+    border: 5px solid rgba(255, 255, 255, 0.25);
+    -webkit-box-shadow: 0 0 5px rgba(28, 127, 159, 1);
+    -moz-box-shadow: 0 0 5px rgba(28, 127, 159, 1);
+    box-shadow: 0 0 5px rgba(28, 127, 159, 1);
+}
+
 .ver-mais {
     float: right;
     margin-bottom: 10px;
@@ -3679,4 +3705,27 @@ ul.gallery li.last {
     font:13px/18px ShantiRegular, Arial, Sans;
 }
 
+/** Paging **/
+div.paging {
+    color: #ccc;
+    margin-top: 1em;
+    clear:both;
+}
 
+div.paging span {
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 16px;
+}
+
+div.paging span.disabled {
+    color: #666;
+    display: inline;
+}
+div.paging span.current {
+    color: #c73e14;
+}
+div.paging span a {
+    font-size: 16px;
+}
