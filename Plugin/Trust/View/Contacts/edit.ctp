@@ -30,6 +30,8 @@ $this->TinyMce->editor(array(
         echo $this->Form->input('twitter');
         echo $this->Form->input('google');
         echo $this->Form->input('location');
+        echo $this->Form->input('latitude');
+        echo $this->Form->input('longitude');
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Submit')); ?>

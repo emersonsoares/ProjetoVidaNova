@@ -91,6 +91,8 @@
             </div>
             <!--End Nav wrapper-->
         </div>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="http://code.google.com/apis/gears/gears_init.js"></script>
         <!--End Nav container-->
         <!--Start Content Background-->
         <div class="content-background">
@@ -123,20 +125,21 @@
                 <!--Start Column 1 -->
                 <div class="column">
                     <span class="heading"><span class="text">Onde estamos</span></span>
-                    
+
                     <?php
                     echo $this->GoogleMapV3->map(array(
-                        'width'=>240,
-                        'height'=>240,
-                        'latitude' => '-9.914534',
-                        'longitude' => '-63.027210',
+                        'width' => 240,
+                        'height' => 240,
+                        'latitude' => $dataContact['Contact']['latitude'],
+                        'longitude' => $dataContact['Contact']['longitude'],
                         'zoom' => 16,
                         'localize' => false,
-                        'type' => 'ROADMAP'));
+                        'type' => 'ROADMAP',
+                        'div'=>'map_canvas-footer'));
 
                     echo $this->GoogleMapV3->addMarker(array(
-                        'latitude' => '-9.914534',
-                        'longitude' => '-63.027210',
+                        'latitude' => $dataContact['Contact']['latitude'],
+                        'longitude' => $dataContact['Contact']['longitude'],
                         'markerIcon' => 'http://google-maps-icons.googlecode.com/files/home.png',
                         'shadowIcon' => 'http://google-maps-icons.googlecode.com/files/home.png',
                         'windowText' => 'Projeto Vida Nova'

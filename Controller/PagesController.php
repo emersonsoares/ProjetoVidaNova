@@ -37,6 +37,12 @@ class PagesController extends AppController {
         $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
     }
 
+    public function location() {
+        $page = $this->Page->read(null, '2');
+        $this->set('page', $page);
+        $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
+    }
+
 }
 
 ?>
