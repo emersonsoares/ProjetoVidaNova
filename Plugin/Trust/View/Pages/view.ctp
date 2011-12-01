@@ -18,12 +18,12 @@
 		</dd>
 		<dt><?php echo __('Content'); ?></dt>
 		<dd>
-			<?php echo h($page['Page']['content']); ?>
+			<?php echo $page['Page']['content']; ?>
 			&nbsp;
 		</dd>
                 <dt><?php echo __('Alternative Content'); ?></dt>
 		<dd>
-			<?php echo h($page['Page']['alternative_content']); ?>
+			<?php echo $page['Page']['alternative_content']; ?>
 			&nbsp;
 		</dd>
 	</dl>

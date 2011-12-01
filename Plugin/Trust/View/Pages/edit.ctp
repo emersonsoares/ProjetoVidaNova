@@ -1,3 +1,20 @@
+<?php
+$this->TinyMce->editor(array(
+    'theme' => 'advanced',
+    'mode' => 'exact',
+    'height' => '500',
+    'elements' => 'mce_content',
+    'plugins' => 'autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave',
+));
+
+$this->TinyMce->editor(array(
+    'theme' => 'simple',
+    'mode' => 'exact',
+    'height' => '200',
+    'elements' => 'mce_alternative_content',
+    'plugins' => 'autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave',
+));
+?>
 <div class="pages form">
     <?php echo $this->Form->create('Page'); ?>
     <fieldset>
@@ -5,8 +22,8 @@
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('title');
-        echo $this->Form->input('content');
-        echo $this->Form->input('alternative_content', array('type'=>'textarea'));
+        echo $this->Form->input('content', array('id' => 'mce_content'));
+        echo $this->Form->input('alternative_content', array('type'=>'textarea', 'id'=>'mce_alternative_content'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Submit')); ?>
