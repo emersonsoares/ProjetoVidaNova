@@ -29,6 +29,7 @@
 Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/verses/*', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/sobre-nos', array('controller' => 'pages', 'action' => 'about'));
+Router::connect('/noticias', array('controller' => 'posts', 'action' => 'index'));
 
 
 Router::connect('/trust/contacts/*', array('controller' => 'contacts', 'action' => 'edit', '1', 'plugin' => 'trust'));

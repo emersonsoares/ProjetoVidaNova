@@ -3,7 +3,7 @@
 class AppController extends Controller {
 
     public $uses = array('Testimonial', 'Contact', 'ServiceTime', 'Post');
-    public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time');
+    public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time', 'Paginator');
 
     //public $components = array('DebugKit.Toolbar');
 

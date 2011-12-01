@@ -59,7 +59,7 @@
                         <?php echo $this->Html->link('Home', array('controller' => 'pages', 'action' => 'index')); ?>                   
                     </li>
                     <li>
-                        <?php echo $this->Html->link('Noticias', array('controller' => 'news', 'action' => 'index')); ?>
+                        <?php echo $this->Html->link('Noticias', array('controller' => 'posts', 'action' => 'index')); ?>
                     </li>
                     <li>
                         <?php echo $this->Html->link('Videos', array('controller' => 'videos', 'action' => 'index')); ?>
