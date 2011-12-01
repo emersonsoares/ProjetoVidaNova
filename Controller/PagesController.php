@@ -7,9 +7,24 @@
  */
 class PagesController extends AppController {
 
-    public $uses = array('Verse', 'Page');
+    public $uses = array('Verse', 'Page', 'Post');
 
     public function index() {
+        $this->set('posts', $this->Post->find('all', array(
+                    'conditions' => array(
+                        'Post.status = ' => 'Active',
+                        'Post.featured = ' => 'No'),
+                    'order' => 'Post.created DESC',
+                    'limit' => 3
+                )));
+
+        $this->Set('featuredPosts', $this->Post->find('all', array(
+                    'conditions' => array(
+                        'Post.status = ' => 'Active',
+                        'Post.featured = ' => 'Yes'),
+                    'order' => 'Post.created DESC',
+                    'limit' => 10
+                )));
         $this->set('title_for_layout', 'Projeto Vida Nova');
         $this->set('lastVerses', $this->Verse->find('all'));
         $about = $this->Page->read(null, '1');

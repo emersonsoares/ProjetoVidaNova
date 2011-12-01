@@ -2,7 +2,7 @@
 
 class AppController extends Controller {
 
-    public $uses = array('Testimonial', 'Contact', 'ServiceTime', 'Post');
+    public $uses = array('Testimonial', 'Contact', 'ServiceTime');
     public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time', 'Paginator');
 
     //public $components = array('DebugKit.Toolbar');
@@ -16,21 +16,6 @@ class AppController extends Controller {
                 )
         );
         $this->set('serviceTimes', $this->ServiceTime->find('all'));
-        $this->set('posts', $this->Post->find('all', array(
-                    'conditions' => array(
-                        'Post.status = ' => 'Active',
-                        'Post.featured = ' => 'No'),
-                    'order' => 'Post.created DESC',
-                    'limit' => 3
-                )));
-
-        $this->Set('featuredPosts', $this->Post->find('all', array(
-                    'conditions' => array(
-                        'Post.status = ' => 'Active',
-                        'Post.featured = ' => 'Yes'),
-                    'order' => 'Post.created DESC',
-                    'limit' => 10
-                )));
     }
 
 }
