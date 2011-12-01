@@ -1,7 +1,14 @@
 <!--Start Main Content-->
 <div class="main-content">
     <a href="#" class="heading"><h1>Contate-nos!</h1></a>
-    <p><?php echo $contact['Contact']['content']; ?></p>
+    <div class="post-entry">
+        <?php echo $contact['Contact']['alternative_content']; ?>
+        <div style="float: left; width: 630px; position: relative;">
+
+            <div class="ornament" style="clear: both; margin: 10px 0 10px 0; float: left;"></div>
+            <?php echo $contact['Contact']['content']; ?>
+        </div>
+    </div>
     <div class="grid-5">
         <div class="form-message">
             <div class="form-wrapper">
