@@ -18,12 +18,12 @@
         </dd>
         <dt><?php echo __('Content'); ?></dt>
         <dd>
-            <?php echo h($post['Post']['content']); ?>
+            <?php echo $post['Post']['content']; ?>
             &nbsp;
         </dd>
         <dt><?php echo __('Alternative Content'); ?></dt>
         <dd>
-            <?php echo h($post['Post']['alternative_content']); ?>
+            <?php echo $post['Post']['alternative_content']; ?>
             &nbsp;
         </dd>
         <dt><?php echo __('Status'); ?></dt>
@@ -51,10 +51,10 @@
             <?php
             echo $this->Html->image($this->Thumbnail->render($post['Post']['cover'], array(
                         'path' => 'uploads' . DS . 'images',
-                        'newWidth' => 150,
-                        'newHeight' => 100,
-                        'quality' => 50,
-                        'resizeOption' => 'auto'
+                        'newWidth' => 300,
+                        'newHeight' => 200,
+                        'quality' => 100,
+                        'resizeOption' => 'landscape'
                     )));
             ?>
             &nbsp;
