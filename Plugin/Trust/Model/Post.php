@@ -6,7 +6,7 @@
  * @property User $User
  */
 class Post extends TrustAppModel {
-
+    
     public $actsAs = array(
         'MeioUpload.MeioUpload' => array(
             'cover' => array(
