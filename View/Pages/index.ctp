@@ -12,7 +12,7 @@
                                 'resizeOption' => 'crop')
                             ));
                     ?>
-                    <span><?php echo $featuredPost['Post']['alternative_content'];?> <?php echo $this->Html->link('>> Leia mais', array('controller'=>'posts', 'action'=>'view', $featuredPost['Post']['id']));?></span>
+                    <span><?php echo $featuredPost['Post']['alternative_content']; ?> <?php echo $this->Html->link('>> Leia mais', array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'])); ?></span>
                 </li>
             <?php } ?>
         </ul>
@@ -55,7 +55,7 @@
         <div class="main-content">
             <?php foreach ($posts as $post) { ?>
                 <!-- Post Item #1 -->
-                <a href="#" class="heading"><h1><?php echo $post['Post']['title']; ?></h1></a>
+                <?php echo $this->Html->link('<h1>' . $post['Post']['title'] . '</h1>', array('controller' => 'posts', 'action' => 'view', $post['Post']['id'], Inflector::slug($post['Post']['title'])), array('escape' => false)); ?>
 
                 <!-- Post Meta -->
                 <div class="post-meta">
@@ -72,25 +72,22 @@
                     <div class="post-entry">
                         <?php
                         echo $this->Html->image($this->Thumbnail->render($post['Post']['cover'], array(
-                                    'newWidth' => 610,
-                                    'newHeight' => 400,
+                                    'newWidth' => 210,
+                                    'newHeight' => 200,
                                     'quality' => 100,
                                     'resizeOption' => 'landscape')
                                 ), array(
-                            'class' => 'featured',
-                            'url' => array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])
+                            'class' => 'featured-list',
+                            'url' => array('controller' => 'posts', 'action' => 'view', $post['Post']['id'], Inflector::slug($post['Post']['title']))
                         ));
                         ?>
-                        <p>
-                            <?php echo $post['Post']['alternative_content']; ?>
-                        </p>
+                        <?php echo $post['Post']['alternative_content']; ?>
                     </div>
                     <!-- End Post Entry -->
                     <!-- read more-->
-                    <?php echo $this->Html->link('Ver Mais', array('action' => 'view', 'controller' => 'posts', $post['Post']['id'])) ?>
                 </div>
-
-                <div class="main ornament" style="margin-top:-15px;"></div>
+                <?php echo $this->Html->link('Ver Mais', array('action' => 'view', 'controller' => 'posts', $post['Post']['id'], Inflector::slug($post['Post']['title'])), array('class' => 'ver-mais')) ?>
+                <div class="main ornament" style="margin-top:-15px; float: left;"></div>
                 <!-- End Post Item -->
             <?php } ?>
         </div>
