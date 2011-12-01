@@ -3275,8 +3275,8 @@ textarea:focus, select:focus, input:focus {
 /* Google Maps API */
 
 #map_canvas {
-    width: 590px; height: 300px;
-    margin:25px;
+    width: 240px; height: 240px;
+    margin:25px 0 25px 0;
     border: 5px solid rgba(255, 255, 255, 0.5);
     max-width:600px;
     -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.1) inset;

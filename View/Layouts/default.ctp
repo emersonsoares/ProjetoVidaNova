@@ -123,7 +123,26 @@
                 <!--Start Column 1 -->
                 <div class="column">
                     <span class="heading"><span class="text">Onde estamos</span></span>
-                    <div id="map_canvas-footer"></div>
+                    
+                    <?php
+                    echo $this->GoogleMapV3->map(array(
+                        'width'=>240,
+                        'height'=>240,
+                        'latitude' => '-9.914534',
+                        'longitude' => '-63.027210',
+                        'zoom' => 16,
+                        'localize' => false,
+                        'type' => 'ROADMAP'));
+
+                    echo $this->GoogleMapV3->addMarker(array(
+                        'latitude' => '-9.914534',
+                        'longitude' => '-63.027210',
+                        'markerIcon' => 'http://google-maps-icons.googlecode.com/files/home.png',
+                        'shadowIcon' => 'http://google-maps-icons.googlecode.com/files/home.png',
+                        'windowText' => 'Projeto Vida Nova'
+                    ));
+                    ?>
+
                 </div>
                 <!--End Column 1 -->
                 <!--Start Column 2 -->
@@ -181,9 +200,6 @@
         </div>
         <div class="footer-credits">Copyright © 2011 Divino - KiwiStudio. All rights reserved.</div>
         <!--End Footer Background-->
-        <?php //echo $this->Html->script('http://maps.googleapis.com/maps/api/js?sensor=false') . "\n"; ?>
-        <?php echo $this->Html->script('map-config-footer.js') . "\n"; ?>
-        <?php //echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js') . "\n"; ?>
         <?php echo $this->Html->script('jquery-1.4.2.min.js'); ?>
         <?php echo $this->Html->script('s3Slider.js') . "\n"; ?>
         <?php echo $this->Html->script('jquery.tipsy.js') . "\n"; ?>
