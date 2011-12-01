@@ -6,6 +6,15 @@ $this->TinyMce->editor(array(
     'elements' => 'mce_content',
     'plugins' => 'autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave',
 ));
+
+$this->TinyMce->editor(array(
+    'theme' => 'simple',
+    'mode' => 'exact',
+    'height' => '200',
+    'elements' => 'mce_alternative_content',
+    'plugins' => 'autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave',
+));
+
 ?>
 <div class="contacts form">
     <?php echo $this->Form->create('Contact'); ?>
@@ -14,7 +23,7 @@ $this->TinyMce->editor(array(
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('content', array('id' => 'mce_content'));
-        echo $this->Form->input('alternative_content');
+        echo $this->Form->input('alternative_content', array('type'=>'textarea', 'id'=>'mce_alternative_content'));
         echo $this->Form->input('email');
         echo $this->Form->input('phone');
         echo $this->Form->input('facebook');
