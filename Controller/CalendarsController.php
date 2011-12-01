@@ -6,9 +6,7 @@
  * @author emersonsoares
  */
 class CalendarsController extends AppController {
-
-    public $helpers = array('Time');
-
+    
     public function index() {
         $months = $this->Calendar->find('all', array(
             'fields' => array('MONTH(Calendar.date) as month'),
