@@ -4,10 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('title');?></th>
-			<th><?php echo $this->Paginator->sort('url');?></th>
 			<th><?php echo $this->Paginator->sort('status');?></th>
-			<th><?php echo $this->Paginator->sort('content');?></th>
-			<th><?php echo $this->Paginator->sort('alternative_content');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
@@ -18,10 +15,7 @@
 	<tr>
 		<td><?php echo h($video['Video']['id']); ?>&nbsp;</td>
 		<td><?php echo h($video['Video']['title']); ?>&nbsp;</td>
-		<td><?php echo h($video['Video']['url']); ?>&nbsp;</td>
 		<td><?php echo h($video['Video']['status']); ?>&nbsp;</td>
-		<td><?php echo h($video['Video']['content']); ?>&nbsp;</td>
-		<td><?php echo h($video['Video']['alternative_content']); ?>&nbsp;</td>
 		<td><?php echo h($video['Video']['modified']); ?>&nbsp;</td>
 		<td><?php echo h($video['Video']['created']); ?>&nbsp;</td>
 		<td class="actions">
@@ -51,5 +45,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Video'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

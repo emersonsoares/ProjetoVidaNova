@@ -1,5 +1,5 @@
 <?php
-/* Video Test cases generated on: 2011-11-27 12:18:51 : 1322410731*/
+/* Video Test cases generated on: 2011-12-02 02:16:01 : 1322806561*/
 App::uses('Video', 'Model');
 
 /**
@@ -12,7 +12,7 @@ class VideoTestCase extends CakeTestCase {
  *
  * @var array
  */
-	public $fixtures = array('app.video');
+	public $fixtures = array('app.video', 'app.user');
 
 /**
  * setUp method

@@ -1,10 +1,11 @@
 <?php
+App::uses('AppModel', 'Model');
 /**
  * Video Model
  *
  * @property User $User
  */
-class Video extends TrustAppModel {
+class Video extends AppModel {
 /**
  * Validation rules
  *

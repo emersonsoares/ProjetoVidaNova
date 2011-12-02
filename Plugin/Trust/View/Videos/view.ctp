@@ -21,11 +21,6 @@
 			<?php echo h($video['Video']['status']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Content'); ?></dt>
-		<dd>
-			<?php echo h($video['Video']['content']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Alternative Content'); ?></dt>
 		<dd>
 			<?php echo h($video['Video']['alternative_content']); ?>
@@ -41,6 +36,11 @@
 			<?php echo h($video['Video']['created']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('User'); ?></dt>
+		<dd>
+			<?php echo $this->Html->link($video['User']['id'], array('controller' => 'users', 'action' => 'view', $video['User']['id'])); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
@@ -50,5 +50,7 @@
 		<li><?php echo $this->Form->postLink(__('Delete Video'), array('action' => 'delete', $video['Video']['id']), null, __('Are you sure you want to delete # %s?', $video['Video']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Videos'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Video'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
