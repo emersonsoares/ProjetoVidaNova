@@ -16,7 +16,7 @@ class PostsController extends AppController {
             'order' => array('Post.created' => 'DESC')
         );
         $this->set('posts', $this->paginate('Post'));
-        $this->set('title_for_layout', 'Projeto Vida Nova | Noticias');
+        $this->set('title_for_layout', 'Projeto Vida Nova | Publicações');
     }
 
     public function view($id = null) {

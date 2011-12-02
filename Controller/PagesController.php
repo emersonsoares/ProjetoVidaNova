@@ -31,14 +31,18 @@ class PagesController extends AppController {
         $this->set('about', $about['Page']['alternative_content']);
     }
 
-    public function about() {
-        $page = $this->Page->read(null, '1');
+    public function location() {
+        $page = $this->Page->read(null, '2');
         $this->set('page', $page);
         $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
     }
 
-    public function location() {
-        $page = $this->Page->read(null, '2');
+    public function view($id = null) {
+        $this->Page->id = $id;
+        if (!$this->Page->exists()) {
+            throw new NotFoundException(__('Invalid page'));
+        }
+        $page = $this->Page->read(null, $id);
         $this->set('page', $page);
         $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
     }

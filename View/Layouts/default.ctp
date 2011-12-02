@@ -59,13 +59,13 @@
                         <?php echo $this->Html->link('Home', array('controller' => 'pages', 'action' => 'index')); ?>                   
                     </li>
                     <li>
-                        <?php echo $this->Html->link('Noticias', array('controller' => 'posts', 'action' => 'index')); ?>
+                        <?php echo $this->Html->link('Publicacoes', array('controller' => 'posts', 'action' => 'index')); ?>
                     </li>
                     <li>
                         <?php echo $this->Html->link('Videos', array('controller' => 'videos', 'action' => 'index')); ?>
                     </li>
                     <li>
-                        <?php echo $this->Html->link('Sobre', array('controller' => 'pages', 'action' => 'about')); ?>
+                        <?php echo $this->Html->link('Sobre', array('controller' => 'pages', 'action' => 'view', 1)); ?>
                         <ul>
                             <li>
                                 <?php echo $this->Html->link('Localizacao', array('controller' => 'pages', 'action' => 'location')); ?>

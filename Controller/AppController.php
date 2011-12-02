@@ -5,8 +5,6 @@ class AppController extends Controller {
     public $uses = array('Testimonial', 'Contact', 'ServiceTime');
     public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time', 'Paginator', 'GoogleMapV3');
 
-    //public $components = array('DebugKit.Toolbar');
-
     function beforeFilter() {
         $this->set('dataContact', $this->Contact->find('first'));
         $this->set('lastTestimonials', $this->Testimonial->find('all', array(

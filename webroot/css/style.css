@@ -1638,7 +1638,7 @@ div.dropdown-slider .ddm:last-child {
 .post-entry {
     position: relative;
     margin-top:-10px;
-    margin-bottom:20px;
+    /*margin-bottom:20px;*/
     font:14px/20px ShantiRegular, Arial, Sans;        
 }
 
@@ -1675,6 +1675,10 @@ div.dropdown-slider .ddm:last-child {
 }
 
 .post-entry img {
+    float: left;
+}
+
+.post-entry {
     float: left;
 }
 

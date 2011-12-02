@@ -28,8 +28,8 @@
  */
 Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/verses/*', array('controller' => 'pages', 'action' => 'index'));
-Router::connect('/sobre-nos', array('controller' => 'pages', 'action' => 'about'));
-Router::connect('/noticias', array('controller' => 'posts', 'action' => 'index'));
+Router::connect('/sobre-o-projeto-vida-nova', array('controller' => 'pages', 'action' => 'view', 1));
+Router::connect('/publicacoes', array('controller' => 'posts', 'action' => 'index'));
 
 
 Router::connect('/trust/contacts/*', array('controller' => 'contacts', 'action' => 'edit', '1', 'plugin' => 'trust'));
