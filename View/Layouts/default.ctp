@@ -71,7 +71,10 @@
                                 <?php echo $this->Html->link('Localizacao', array('controller' => 'pages', 'action' => 'location')); ?>
                             </li>
                             <li>
-                                <?php echo $this->Html->link('Tratamentos', array('controller' => 'pages', 'action' => 'tratamentos')); ?>
+                                <?php echo $this->Html->link('Nossa Clínica', array('controller' => 'pages', 'action' => 'view', 3)); ?>
+                            </li>
+                            <li>
+                                <?php echo $this->Html->link('Tratamentos', array('controller' => 'pages', 'action' => 'view', 4)); ?>
                             </li>
                             <li>
                                 <?php echo $this->Html->link('Equipe', array('controller' => 'teams', 'action' => 'index')); ?>
@@ -135,7 +138,7 @@
                         'zoom' => 16,
                         'localize' => false,
                         'type' => 'ROADMAP',
-                        'div'=>'map_canvas-footer'));
+                        'div' => 'map_canvas-footer'));
 
                     echo $this->GoogleMapV3->addMarker(array(
                         'latitude' => $dataContact['Contact']['latitude'],
