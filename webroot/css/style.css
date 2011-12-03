@@ -1944,7 +1944,7 @@ ul.media li.sermon {
 
 ul.media li.movie {
     background: url(../img/movie-icon.png) left center no-repeat;
-    background: url(../img/pic-icon.png) left center no-repeat, url(../img/separator.png) bottom center no-repeat;
+    background: url(../img/movie-icon.png) left center no-repeat, url(../img/separator.png) bottom center no-repeat;
     font:14px/1.3em ShantiRegular, Arial, sans;
     color:#333;
     position:relative;

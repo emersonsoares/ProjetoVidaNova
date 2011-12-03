@@ -7,6 +7,8 @@
  */
 class VideosController extends TrustAppController {
 
+    public $helpers = array('Video');
+    
     /**
      * index method
      *

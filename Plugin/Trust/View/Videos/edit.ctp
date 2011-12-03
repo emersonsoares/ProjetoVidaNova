@@ -1,9 +1,9 @@
 <?php
 $this->TinyMce->editor(array(
-    'theme' => 'simple',
+    'theme' => 'advanced',
     'mode' => 'exact',
-    'height' => '200',
-    'elements' => 'mce_alternative_content',
+    'height' => '400',
+    'elements' => 'mce_content',
     'plugins' => 'autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,inlinepopups,autosave',
 ));
 ?>
@@ -19,7 +19,8 @@ $this->TinyMce->editor(array(
             'options' => array('Active' => 'Active', 'Inactive' => 'Inactive'),
             'empty' => 'choose one'
         ));
-        echo $this->Form->input('alternative_content', array('id' => 'mce_alternative_content', 'type' => 'textarea'));
+        echo $this->Form->input('alternative_content');
+        echo $this->Form->input('content', array('type' => 'textarea', 'id' => 'mce_content'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Submit')); ?>

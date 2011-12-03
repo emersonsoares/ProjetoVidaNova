@@ -28,6 +28,7 @@
  */
 Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
 Router::connect('/verses/*', array('controller' => 'pages', 'action' => 'index'));
+Router::connect('/agenda', array('controller'=>'calendars'));
 
 Router::connect('/publicacoes', array('controller' => 'posts', 'action' => 'index'));
 
