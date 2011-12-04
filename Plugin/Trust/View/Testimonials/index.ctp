@@ -15,7 +15,7 @@
                 <td><?php
         echo $this->Html->image($this->Thumbnail->render($testimonial['Testimonial']['cover'], array(
                     'newWidth' => 64,
-                    'newHeight' => 64,
+                    'newHeight' => 50,
                     'quality' => 100,
                     'resizeOption' => 'crop')
                 ));

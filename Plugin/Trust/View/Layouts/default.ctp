@@ -58,7 +58,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                     |
                     <?php echo $this->Html->link(__('Contact Informations'), array('controller' => 'contacts')); ?>
                     |
-                    <?php echo $this->Html->link(__('Logout'), array('controller'=>'users', 'action'=>'logout')); ?>
+                    <?php echo $this->Html->link(__('Members'), array('controller' => 'members', 'action' => 'index')); ?>
+                    |
+                    <?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); ?>
                 </div>
             </div>
             <div id="content">
