@@ -14,7 +14,7 @@
                         'url' => array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))
                     ));
                     ?>
-                    <span><?php echo $featuredPost['Post']['alternative_content']; ?> <?php echo $this->Html->link('>> Leia mais', array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))); ?></span>
+                    <span><?php echo strip_tags($featuredPost['Post']['alternative_content']); ?> <?php echo $this->Html->link('>> Leia mais', array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))); ?></span>
                 </li>
             <?php } ?>
         </ul>

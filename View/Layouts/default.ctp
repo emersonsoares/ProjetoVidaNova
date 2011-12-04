@@ -77,7 +77,7 @@
                                 <?php echo $this->Html->link('Tratamentos', array('controller' => 'custom_pages', 'action' => 'view', 4)); ?>
                             </li>
                             <li>
-                                <?php echo $this->Html->link('Equipe', array('controller' => 'teams', 'action' => 'index')); ?>
+                                <?php echo $this->Html->link('Equipe', array('controller' => 'members', 'action' => 'index')); ?>
                             </li>
                             <li>
                                 <?php echo $this->Html->link('Depoimentos', array('controller' => 'testimonials', 'action' => 'index')); ?>
