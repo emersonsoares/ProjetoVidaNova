@@ -1,11 +1,6 @@
 <div class="serviceTimes view">
 <h2><?php  echo __('Service Time');?></h2>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($serviceTime['ServiceTime']['id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Content'); ?></dt>
 		<dd>
 			<?php echo h($serviceTime['ServiceTime']['content']); ?>

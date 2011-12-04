@@ -6,12 +6,9 @@
  * @property User $User
  */
 class UsersController extends TrustAppController {
-    
-    public function beforeFilter() {
-        parent::beforeFilter();
-    }
 
     public function login() {
+        $this->layout = 'login';
         if ($this->Auth->login()) {
             $this->redirect($this->Auth->redirect());
         } else {

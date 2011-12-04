@@ -2,7 +2,6 @@
     <h2><?php echo __('Pages'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?php echo $this->Paginator->sort('id'); ?></th>
             <th><?php echo $this->Paginator->sort('title'); ?></th>
             <th><?php echo $this->Paginator->sort('alternative_content'); ?></th>
             <th class="actions"><?php echo __('Actions'); ?></th>
@@ -12,7 +11,6 @@
         foreach ($pages as $page):
             ?>
             <tr>
-                <td><?php echo h($page['Page']['id']); ?>&nbsp;</td>
                 <td><?php echo h($page['Page']['title']); ?>&nbsp;</td>
                 <td><?php echo $page['Page']['alternative_content']; ?>&nbsp;</td>
                 <td class="actions">

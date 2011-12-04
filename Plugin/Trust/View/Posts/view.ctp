@@ -1,12 +1,7 @@
 <div class="posts view">
     <h2><?php echo __('Post'); ?></h2>
     <dl>
-        <dt><?php echo __('Id'); ?></dt>
-        <dd>
-            <?php echo h($post['Post']['id']); ?>
-            &nbsp;
-        </dd>
-        <dt><?php echo __('User'); ?></dt>
+        <dt><?php echo __('Created by'); ?></dt>
         <dd>
             <?php echo $this->Html->link($post['User']['username'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
             &nbsp;

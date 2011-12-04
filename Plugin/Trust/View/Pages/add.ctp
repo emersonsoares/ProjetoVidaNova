@@ -22,7 +22,7 @@ $this->TinyMce->editor(array(
         <?php
         echo $this->Form->input('title');
         echo $this->Form->input('content', array('id' => 'mce_content'));
-        echo $this->Form->input('alternative_content', array('type'=>'textarea', 'id'=>'mce_alternative_content'));
+        echo $this->Form->input('alternative_content', array('type' => 'textarea', 'id' => 'mce_alternative_content'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Submit')); ?>
@@ -30,7 +30,6 @@ $this->TinyMce->editor(array(
 <div class="actions">
     <h3><?php echo __('Actions'); ?></h3>
     <ul>
-
         <li><?php echo $this->Html->link(__('List Pages'), array('action' => 'index')); ?></li>
         <li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>

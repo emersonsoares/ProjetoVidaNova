@@ -11,12 +11,12 @@
             <?php echo h($video['Video']['title']); ?>
             &nbsp;
         </dd>
-        <dt><?php echo __('Url'); ?></dt>
+        <dt><?php echo __('Video'); ?></dt>
         <dd>
             <?php
             echo $this->Video->embed($video['Video']['url'], array(
-                'width' => 450,
-                'height' => 300)
+                'width' => 700,
+                'height' => 550)
             );
             ?>
             &nbsp;
@@ -33,17 +33,17 @@
         </dd>
         <dt><?php echo __('Modified'); ?></dt>
         <dd>
-            <?php echo h($video['Video']['modified']); ?>
+            <?php echo $this->Time->format('d/m/Y H:i',h($video['Video']['modified'])); ?>
             &nbsp;
         </dd>
         <dt><?php echo __('Created'); ?></dt>
         <dd>
-            <?php echo h($video['Video']['created']); ?>
+            <?php echo $this->Time->format('d/m/Y H:i', h($video['Video']['created'])); ?>
             &nbsp;
         </dd>
         <dt><?php echo __('User'); ?></dt>
         <dd>
-            <?php echo $this->Html->link($video['User']['id'], array('controller' => 'users', 'action' => 'view', $video['User']['id'])); ?>
+            <?php echo $this->Html->link($video['User']['username'], array('controller' => 'users', 'action' => 'view', $video['User']['id'])); ?>
             &nbsp;
         </dd>
     </dl>

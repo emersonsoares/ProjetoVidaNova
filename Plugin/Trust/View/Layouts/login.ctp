@@ -37,29 +37,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
         <div id="container">
             <div id="header">
                 <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-                <div class="custom-menu">
-                    <?php echo $this->Html->link(__('Users'), array('controller' => 'users', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Groups'), array('controller' => 'groups', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Posts'), array('controller' => 'posts', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Pages'), array('controller' => 'pages', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Videos'), array('controller' => 'videos', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Calendars'), array('controller' => 'calendars', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Verses'), array('controller' => 'verses', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Service Times'), array('controller' => 'service_times', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Testimonials'), array('controller' => 'testimonials', 'action' => 'index')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Contact Informations'), array('controller' => 'contacts')); ?>
-                    |
-                    <?php echo $this->Html->link(__('Logout'), array('controller'=>'users', 'action'=>'logout')); ?>
-                </div>
+
             </div>
             <div id="content">
 

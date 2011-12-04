@@ -2,7 +2,6 @@
     <h2><?php echo __('Calendars'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <tr>
-            <th><?php echo $this->Paginator->sort('id'); ?></th>
             <th><?php echo $this->Paginator->sort('title'); ?></th>
             <th><?php echo $this->Paginator->sort('location'); ?></th>
             <th><?php echo $this->Paginator->sort('date'); ?></th>
@@ -14,7 +13,6 @@
         foreach ($calendars as $calendar):
             ?>
             <tr>
-                <td><?php echo h($calendar['Calendar']['id']); ?>&nbsp;</td>
                 <td><?php echo h($calendar['Calendar']['title']); ?>&nbsp;</td>
                 <td><?php echo h($calendar['Calendar']['location']); ?>&nbsp;</td>
                 <td><?php echo h($calendar['Calendar']['date']); ?>&nbsp;</td>
@@ -22,10 +20,10 @@
                 <td class="actions">
                     <?php echo $this->Html->link(__('View'), array('action' => 'view', $calendar['Calendar']['id'])); ?>
                     <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $calendar['Calendar']['id'])); ?>
-    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $calendar['Calendar']['id']), null, __('Are you sure you want to delete # %s?', $calendar['Calendar']['id'])); ?>
+                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $calendar['Calendar']['id']), null, __('Are you sure you want to delete # %s?', $calendar['Calendar']['id'])); ?>
                 </td>
             </tr>
-<?php endforeach; ?>
+        <?php endforeach; ?>
     </table>
     <p>
         <?php
