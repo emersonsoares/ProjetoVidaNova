@@ -22,6 +22,7 @@ $dispatcher = 'Cake' . $ds . 'Console' . $ds . 'ShellDispatcher.php';
 $found = false;
 $paths = explode(PATH_SEPARATOR, ini_get('include_path'));
 
+
 foreach ($paths as $path) {
 	if (file_exists($path . $ds . $dispatcher)) {
 		$found = $path;
