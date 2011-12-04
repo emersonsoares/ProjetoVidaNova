@@ -34,6 +34,8 @@ Router::connect('/tratamentos', array('controller' => 'custom_pages', 'action' =
 
 Router::connect('/contate_nos', array('controller' => 'contacts', 'action' => 'index'));
 
+Router::connect('/depoimentos', array('controller'=>'testimonials', 'action'=>'index'));
+
 Router::connect('/trust', array('controller' => 'users', 'action' => 'login', 'plugin'=>'trust'));
 
 /**

@@ -9,7 +9,7 @@
         <!--Stylesheets-->
         <?php echo $this->Html->css(array('reset.css', 'style.css', 'chosen/chosen.css')); ?>
         <!-- CSS for specific color variation -->
-        <?php echo $this->Html->css(array('custom/pattern/pattern.css', 'custom/color/dark-green.css')); ?>
+        <?php echo $this->Html->css(array('custom/pattern/pattern.css', 'custom/color/light-blue.css')); ?>
         <!--Google Fonts-->    
         <?php echo $this->Html->css('http://fonts.googleapis.com/css?family=Maiden+Orange|News+Cycle|Open+Sans|Lobster|Droid+Sans|Pacifico') . "\n"; ?>
         <!-- AnythingSlider -->
@@ -164,7 +164,8 @@
                                 <?php echo $this->Html->image('twit-image.png'); ?>
                             </div>
                             <div class="twitter-text">
-                                <a href="#"><?php echo $testimonial['Testimonial']['author'] ?>:</a> <?php echo $testimonial['Testimonial']['content']; ?>
+                                <?php echo $this->Html->link($testimonial['Testimonial']['author'], array('controller' => 'testimonials')); ?>
+                                <?php echo strip_tags($testimonial['Testimonial']['content']); ?>
                             </div>
                         </div>    
                     <?php endforeach; ?>
