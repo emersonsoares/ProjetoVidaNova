@@ -84,8 +84,8 @@ class User extends TrustAppModel {
             'finderQuery' => '',
             'counterQuery' => ''
         ),
-        'Page' => array(
-            'className' => 'Page',
+        'CustomPage' => array(
+            'className' => 'CustomPage',
             'foreignKey' => 'user_id',
             'dependent' => false,
             'conditions' => '',

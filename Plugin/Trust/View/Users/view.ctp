@@ -34,8 +34,8 @@
         <li><?php echo $this->Html->link(__('New Group'), array('controller' => 'groups', 'action' => 'add')); ?> </li>
         <li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Pages'), array('controller' => 'pages', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Page'), array('controller' => 'pages', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('List Custom Pages'), array('controller' => 'custom_pages', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Custom Page'), array('controller' => 'custom_pages', 'action' => 'add')); ?> </li>
     </ul>
 </div>
 <div class="related">
@@ -75,8 +75,8 @@
     </div>
 </div>
 <div class="related">
-    <h3><?php echo __('Related Pages'); ?></h3>
-    <?php if (!empty($user['Page'])): ?>
+    <h3><?php echo __('Related Custom Pages'); ?></h3>
+    <?php if (!empty($user['CustomPage'])): ?>
         <table cellpadding = "0" cellspacing = "0">
             <tr>
                 <th><?php echo __('Title'); ?></th>
@@ -85,15 +85,15 @@
             </tr>
             <?php
             $i = 0;
-            foreach ($user['Page'] as $page):
+            foreach ($user['CustomPage'] as $customPage):
                 ?>
                 <tr>
-                    <td><?php echo $page['title']; ?></td>
-                    <td><?php echo $page['alternative_content']; ?></td>
+                    <td><?php echo $customPage['title']; ?></td>
+                    <td><?php echo $customPage['alternative_content']; ?></td>
                     <td class="actions">
-                        <?php echo $this->Html->link(__('View'), array('controller' => 'pages', 'action' => 'view', $page['id'])); ?>
-                        <?php echo $this->Html->link(__('Edit'), array('controller' => 'pages', 'action' => 'edit', $page['id'])); ?>
-                        <?php echo $this->Form->postLink(__('Delete'), array('controller' => 'pages', 'action' => 'delete', $page['id']), null, __('Are you sure you want to delete # %s?', $page['id'])); ?>
+                        <?php echo $this->Html->link(__('View'), array('controller' => 'custom_pages', 'action' => 'view', $customPage['id'])); ?>
+                        <?php echo $this->Html->link(__('Edit'), array('controller' => 'custom_pages', 'action' => 'edit', $customPage['id'])); ?>
+                        <?php echo $this->Form->postLink(__('Delete'), array('controller' => 'custom_pages', 'action' => 'delete', $customPage['id']), null, __('Are you sure you want to delete # %s?', $customPage['id'])); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -102,7 +102,7 @@
 
     <div class="actions">
         <ul>
-            <li><?php echo $this->Html->link(__('New Page'), array('controller' => 'pages', 'action' => 'add')); ?> </li>
+            <li><?php echo $this->Html->link(__('New Custom Page'), array('controller' => 'custom_pages', 'action' => 'add')); ?> </li>
         </ul>
     </div>
 </div>

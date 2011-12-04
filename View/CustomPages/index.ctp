@@ -11,8 +11,8 @@
                                 'quality' => 100,
                                 'resizeOption' => 'crop')
                             ), array(
-                                'url'=>array('controller'=>'posts', 'action'=>'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))
-                            ));
+                        'url' => array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))
+                    ));
                     ?>
                     <span><?php echo $featuredPost['Post']['alternative_content']; ?> <?php echo $this->Html->link('>> Leia mais', array('controller' => 'posts', 'action' => 'view', $featuredPost['Post']['id'], Inflector::slug($featuredPost['Post']['title']))); ?></span>
                 </li>

@@ -1,6 +1,6 @@
 <?php
 
-class Page extends AppModel {
+class CustomPage extends AppModel {
     
 }
 

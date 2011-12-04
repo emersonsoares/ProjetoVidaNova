@@ -16,9 +16,9 @@ $this->TinyMce->editor(array(
 ));
 ?>
 <div class="pages form">
-    <?php echo $this->Form->create('Page'); ?>
+    <?php echo $this->Form->create('CustomPage'); ?>
     <fieldset>
-        <legend><?php echo __('Edit Page'); ?></legend>
+        <legend><?php echo __('Edit Custom Page'); ?></legend>
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('title');
@@ -33,7 +33,7 @@ $this->TinyMce->editor(array(
     <ul>
 
         <li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Page.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Page.id'))); ?></li>
-        <li><?php echo $this->Html->link(__('List Pages'), array('action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('List Custom Pages'), array('action' => 'index')); ?></li>
         <li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
     </ul>

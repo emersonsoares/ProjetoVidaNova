@@ -16,9 +16,9 @@ $this->TinyMce->editor(array(
 ));
 ?>
 <div class="pages form">
-    <?php echo $this->Form->create('Page'); ?>
+    <?php echo $this->Form->create('CustomPage'); ?>
     <fieldset>
-        <legend><?php echo __('Add Page'); ?></legend>
+        <legend><?php echo __('Add Custom Page'); ?></legend>
         <?php
         echo $this->Form->input('title');
         echo $this->Form->input('content', array('id' => 'mce_content'));
@@ -30,7 +30,7 @@ $this->TinyMce->editor(array(
 <div class="actions">
     <h3><?php echo __('Actions'); ?></h3>
     <ul>
-        <li><?php echo $this->Html->link(__('List Pages'), array('action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('List Custom Pages'), array('action' => 'index')); ?></li>
         <li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
     </ul>

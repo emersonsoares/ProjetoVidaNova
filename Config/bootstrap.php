@@ -63,6 +63,4 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-//Configure::write('TinyMCE.editorOptions', array('height' => '300px'));
-
 CakePlugin::loadAll();

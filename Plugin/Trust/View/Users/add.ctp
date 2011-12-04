@@ -19,7 +19,7 @@
         <li><?php echo $this->Html->link(__('New Group'), array('controller' => 'groups', 'action' => 'add')); ?> </li>
         <li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('List Pages'), array('controller' => 'pages', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('New Page'), array('controller' => 'pages', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('List Custom Pages'), array('controller' => 'custom_pages', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Custom Page'), array('controller' => 'custom_pages', 'action' => 'add')); ?> </li>
     </ul>
 </div>

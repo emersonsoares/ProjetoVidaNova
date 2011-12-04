@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Description of PagesController
+ * Description of CustomPagesController
  *
  * @author emersonsoares
  */
-class PagesController extends AppController {
+class CustomPagesController extends AppController {
 
-    public $uses = array('Verse', 'Page', 'Post');
+    public $uses = array('Verse', 'CustomPage', 'Post');
 
     public function index() {
         $this->set('posts', $this->Post->find('all', array(
@@ -27,24 +27,24 @@ class PagesController extends AppController {
                 )));
         $this->set('title_for_layout', 'Projeto Vida Nova');
         $this->set('lastVerses', $this->Verse->find('all'));
-        $about = $this->Page->read(null, '1');
-        $this->set('about', $about['Page']['alternative_content']);
+        $about = $this->CustomPage->read(null, '1');
+        $this->set('about', $about['CustomPage']['alternative_content']);
     }
 
     public function location() {
-        $page = $this->Page->read(null, '2');
-        $this->set('page', $page);
-        $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
+        $customPage = $this->CustomPage->read(null, '2');
+        $this->set('customPage', $customPage);
+        $this->set('title_for_layout', 'Projeto Vida Nova | ' . $customPage['CustomPage']['title']);
     }
 
     public function view($id = null) {
-        $this->Page->id = $id;
-        if (!$this->Page->exists()) {
-            throw new NotFoundException(__('Invalid page'));
+        $this->CustomPage->id = $id;
+        if (!$this->CustomPage->exists()) {
+            throw new NotFoundException(__('Invalid Custom Page'));
         }
-        $page = $this->Page->read(null, $id);
-        $this->set('page', $page);
-        $this->set('title_for_layout', 'Projeto Vida Nova | ' . $page['Page']['title']);
+        $customPage = $this->CustomPage->read(null, $id);
+        $this->set('customPage', $customPage);
+        $this->set('title_for_layout', 'Projeto Vida Nova | ' . $customPage['CustomPage']['title']);
     }
 
 }

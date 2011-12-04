@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Pages Controller
+ * CustomPages Controller
  *
- * @property Page $Page
+ * @property CustomPage $CustomPage
  */
-class PagesController extends TrustAppController {
+class CustomPagesController extends TrustAppController {
 
     /**
      * index method
@@ -13,8 +13,8 @@ class PagesController extends TrustAppController {
      * @return void
      */
     public function index() {
-        $this->Page->recursive = 0;
-        $this->set('pages', $this->paginate());
+        $this->CustomPage->recursive = 0;
+        $this->set('customPages', $this->paginate());
     }
 
     /**
@@ -24,11 +24,11 @@ class PagesController extends TrustAppController {
      * @return void
      */
     public function view($id = null) {
-        $this->Page->id = $id;
-        if (!$this->Page->exists()) {
-            throw new NotFoundException(__('Invalid page'));
+        $this->CustomPage->id = $id;
+        if (!$this->CustomPage->exists()) {
+            throw new NotFoundException(__('Invalid custom page'));
         }
-        $this->set('page', $this->Page->read(null, $id));
+        $this->set('customPage', $this->CustomPage->read(null, $id));
     }
 
     /**
@@ -38,16 +38,16 @@ class PagesController extends TrustAppController {
      */
     public function add() {
         if ($this->request->is('post')) {
-            $this->request->data['Page']['user_id'] = $this->Auth->user('id');
-            $this->Page->create();
-            if ($this->Page->save($this->request->data)) {
-                $this->Session->setFlash(__('The page has been saved'));
+            $this->request->data['CustomPage']['user_id'] = $this->Auth->user('id');
+            $this->CustomPage->create();
+            if ($this->CustomPage->save($this->request->data)) {
+                $this->Session->setFlash(__('The custom page has been saved'));
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash(__('The page could not be saved. Please, try again.'));
+                $this->Session->setFlash(__('The custom page could not be saved. Please, try again.'));
             }
         }
-        $users = $this->Page->User->find('list');
+        $users = $this->CustomPage->User->find('list');
         $this->set(compact('users'));
     }
 
@@ -58,21 +58,21 @@ class PagesController extends TrustAppController {
      * @return void
      */
     public function edit($id = null) {
-        $this->Page->id = $id;
-        if (!$this->Page->exists()) {
-            throw new NotFoundException(__('Invalid page'));
+        $this->CustomPage->id = $id;
+        if (!$this->CustomPage->exists()) {
+            throw new NotFoundException(__('Invalid custom page'));
         }
         if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->Page->save($this->request->data)) {
-                $this->Session->setFlash(__('The page has been saved'));
+            if ($this->CustomPage->save($this->request->data)) {
+                $this->Session->setFlash(__('The custom page has been saved'));
                 $this->redirect(array('action' => 'index'));
             } else {
-                $this->Session->setFlash(__('The page could not be saved. Please, try again.'));
+                $this->Session->setFlash(__('The custom page could not be saved. Please, try again.'));
             }
         } else {
-            $this->request->data = $this->Page->read(null, $id);
+            $this->request->data = $this->CustomPage->read(null, $id);
         }
-        $users = $this->Page->User->find('list');
+        $users = $this->CustomPage->User->find('list');
         $this->set(compact('users'));
     }
 
@@ -86,15 +86,15 @@ class PagesController extends TrustAppController {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
         }
-        $this->Page->id = $id;
-        if (!$this->Page->exists()) {
-            throw new NotFoundException(__('Invalid page'));
+        $this->CustomPage->id = $id;
+        if (!$this->CustomPage->exists()) {
+            throw new NotFoundException(__('Invalid custom page'));
         }
-        if ($this->Page->delete()) {
-            $this->Session->setFlash(__('Page deleted'));
+        if ($this->CustomPage->delete()) {
+            $this->Session->setFlash(__('Custom Page deleted'));
             $this->redirect(array('action' => 'index'));
         }
-        $this->Session->setFlash(__('Page was not deleted'));
+        $this->Session->setFlash(__('Custom Page was not deleted'));
         $this->redirect(array('action' => 'index'));
     }
 

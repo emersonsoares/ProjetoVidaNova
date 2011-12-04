@@ -56,7 +56,7 @@
                 <!--End Logo-->
                 <ul class="nav">
                     <li>
-                        <?php echo $this->Html->link('Home', array('controller' => 'pages', 'action' => 'index')); ?>                   
+                        <?php echo $this->Html->link('Home', array('controller' => 'custom_pages', 'action' => 'index')); ?>                   
                     </li>
                     <li>
                         <?php echo $this->Html->link('Publicacoes', array('controller' => 'posts', 'action' => 'index')); ?>
@@ -65,16 +65,16 @@
                         <?php echo $this->Html->link('Videos', array('controller' => 'videos', 'action' => 'index')); ?>
                     </li>
                     <li>
-                        <?php echo $this->Html->link('Sobre', array('controller' => 'pages', 'action' => 'view', 1)); ?>
+                        <?php echo $this->Html->link('Sobre', array('controller' => 'custom_pages', 'action' => 'view', 1)); ?>
                         <ul>
                             <li>
-                                <?php echo $this->Html->link('Localizacao', array('controller' => 'pages', 'action' => 'location')); ?>
+                                <?php echo $this->Html->link('Localizacao', array('controller' => 'custom_pages', 'action' => 'location')); ?>
                             </li>
                             <li>
-                                <?php echo $this->Html->link('Nossa Clínica', array('controller' => 'pages', 'action' => 'view', 3)); ?>
+                                <?php echo $this->Html->link('Nossa Clínica', array('controller' => 'custom_pages', 'action' => 'view', 3)); ?>
                             </li>
                             <li>
-                                <?php echo $this->Html->link('Tratamentos', array('controller' => 'pages', 'action' => 'view', 4)); ?>
+                                <?php echo $this->Html->link('Tratamentos', array('controller' => 'custom_pages', 'action' => 'view', 4)); ?>
                             </li>
                             <li>
                                 <?php echo $this->Html->link('Equipe', array('controller' => 'teams', 'action' => 'index')); ?>
