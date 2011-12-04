@@ -3,13 +3,24 @@
     <dl>
         <dt><?php echo __('Content'); ?></dt>
         <dd>
-            <?php echo h($testimonial['Testimonial']['content']); ?>
+            <?php echo $testimonial['Testimonial']['content']; ?>
             &nbsp;
         </dd>
         <dt><?php echo __('Author'); ?></dt>
         <dd>
             <?php echo h($testimonial['Testimonial']['author']); ?>
             &nbsp;
+        </dd>
+        <dt><?php echo __('Cover'); ?></dt>
+        <dd>
+            <?php
+            echo $this->Html->image($this->Thumbnail->render($testimonial['Testimonial']['cover'], array(
+                        'newWidth' => 200,
+                        'newHeight' => 200,
+                        'quality' => 100,
+                        'resizeOption' => 'landscape')
+                    ));
+            ?>
         </dd>
     </dl>
 </div>

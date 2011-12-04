@@ -116,7 +116,7 @@ Configure::write('App.encoding', 'UTF-8');
  * Turn off all caching application-wide.
  *
  */
-Configure::write('Cache.disable', true);
+//Configure::write('Cache.disable', true);
 
 /**
  * Enable cache checking.
@@ -297,7 +297,7 @@ Configure::write('Acl.database', 'default');
  */
 $engine = 'File';
 if (extension_loaded('apc') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) {
-    $engine = 'Apc';
+    $engine = 'apc';
 }
 
 // In development mode, caches should expire quickly.
