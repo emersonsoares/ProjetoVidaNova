@@ -44,7 +44,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                     |
                     <?php echo $this->Html->link(__('Posts'), array('controller' => 'posts', 'action' => 'index')); ?>
                     |
-                    <?php echo $this->Html->link(__('Pages'), array('controller' => 'pages', 'action' => 'index')); ?>
+                    <?php echo $this->Html->link(__('Custom Pages'), array('controller' => 'custom_pages', 'action' => 'index')); ?>
                     |
                     <?php echo $this->Html->link(__('Videos'), array('controller' => 'videos', 'action' => 'index')); ?>
                     |

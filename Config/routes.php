@@ -23,7 +23,7 @@
  */
 Router::connect('/', array('controller' => 'custom_pages', 'action' => 'index'));
 Router::connect('/verses/*', array('controller' => 'custom_pages', 'action' => 'index'));
-Router::connect('/agenda', array('controller'=>'calendars'));
+Router::connect('/agenda', array('controller' => 'calendars'));
 
 Router::connect('/publicacoes', array('controller' => 'posts', 'action' => 'index'));
 
@@ -34,20 +34,13 @@ Router::connect('/tratamentos', array('controller' => 'custom_pages', 'action' =
 
 Router::connect('/contate_nos', array('controller' => 'contacts', 'action' => 'index'));
 
-Router::connect('/trust/contacts/*', array('controller' => 'contacts', 'action' => 'index', 'plugin' => 'trust'));
-
-/**
- * ...and connect the rest of 'Pages' controller's urls.
- */
-Router::connect('/trust', array('controller' => 'users', 'action' => 'login', 'plugin' => 'trust'));
-Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'plugin' => 'trust'));
+Router::connect('/trust', array('controller' => 'users', 'action' => 'login', 'plugin'=>'trust'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on 
  * how to customize the loading of plugin routes.
  */
 CakePlugin::routes();
-
 /**
  * Load the CakePHP default routes. Remove this if you do not want to use
  * the built-in default routes.

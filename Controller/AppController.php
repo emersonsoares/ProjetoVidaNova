@@ -3,7 +3,7 @@
 class AppController extends Controller {
 
     public $uses = array('Testimonial', 'Contact', 'ServiceTime');
-    public $helpers = array('Html', 'Form', 'Session' , 'Thumbnail', 'Time', 'Paginator', 'GoogleMapV3');
+    public $helpers = array('Html', 'Form', 'Session', 'Thumbnail', 'Time', 'Paginator', 'GoogleMapV3');
 
     function beforeFilter() {
         $this->set('dataContact', $this->Contact->find('first'));
