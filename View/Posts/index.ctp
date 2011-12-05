@@ -6,7 +6,7 @@
         <div class="post-item">
             <!-- Post Title -->
             <div class="post-title">
-                <h1><?php echo $this->Html->link($post['Post']['title'], array('controller'=>'posts', 'action'=>'view', $post['Post']['id'], $post['Post']['title']));?></h1>
+                <h1><?php echo $this->Html->link($post['Post']['title'], array('controller'=>'posts', 'action'=>'view', $post['Post']['id'], Inflector::slug($post['Post']['title'])));?></h1>
             </div>
             <!-- Post Meta -->
             <div class="post-meta">
