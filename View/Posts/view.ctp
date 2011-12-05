@@ -4,7 +4,7 @@
     <div class="post-item-single">
         <!-- Post Title -->
         <div class="post-title">
-            <a href="#"><h1><?php echo $post['Post']['title'] ?></h1></a>
+            <h1><?php echo $this->Html->link($post['Post']['title'], '') ?></a></h1>
         </div>
         <!-- Post Entry -->
         <!-- Post Meta -->

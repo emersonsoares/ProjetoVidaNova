@@ -1,11 +1,12 @@
 <!--Start Main Content-->
 <div class="main-content">
+    <?php echo $this->Html->link('<h1>Equipe</h1>', '', array('escape' => false)); ?>
     <?php foreach ($members as $member) { ?>
         <!-- Member Item #1 -->
         <div class="post-item">
             <!-- Member Title -->
             <div class="member-title">
-                <?php echo $this->Html->link('<h1>' . $member['Member']['name'] . '</h1>', '#', array('escape' => false)); ?>
+                <h1><?php echo $this->Html->link($member['Member']['name'], ''); ?></h1>
             </div>
             <div class="post-item">
                 <!-- Member Entry -->

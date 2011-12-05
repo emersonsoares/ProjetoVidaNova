@@ -1,11 +1,12 @@
 <!--Start Main Content-->
 <div class="main-content">
+    <?php echo $this->Html->link('<h1>Depoimentos</h1>', '', array('escape' => false)); ?>
     <?php foreach ($testimonials as $testimonial) { ?>
         <!-- Testimonial Item #1 -->
         <div class="testimonial-item">
             <!-- Testimonial Title -->
             <div class="testimonial-title">
-                <?php echo $this->Html->link('<h1>' . $testimonial['Testimonial']['author'] . '</h1>', '#', array('escape' => false)); ?>
+                <h1><?php echo $this->Html->link($testimonial['Testimonial']['author'], ''); ?></h1>
             </div>
             <!-- End Testimonial Meta -->
             <div class="testimonial-item">

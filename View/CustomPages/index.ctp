@@ -55,10 +55,11 @@
     <div class="content-wrapper">
         <!--Start Main Content-->
         <div class="main-content">
+            <?php echo $this->Html->link($this->Html->tag('h1', 'Ultimas Publicacoes'), array('controller' => 'posts', 'action' => 'index'), array('escape'=>false)); ?>
             <?php foreach ($posts as $post) { ?>
                 <!-- Post Item #1 -->
-                <?php echo $this->Html->link('<h1>' . $post['Post']['title'] . '</h1>', array('controller' => 'posts', 'action' => 'view', $post['Post']['id'], Inflector::slug($post['Post']['title'])), array('escape' => false)); ?>
 
+                <h1><?php echo $this->Html->link($post['Post']['title'], array('controller'=>'posts', 'action'=>'view', $post['Post']['id'], Inflector::slug($post['Post']['title'])));?></h1>
                 <!-- Post Meta -->
                 <div class="post-meta">
                     <div class="alignright">

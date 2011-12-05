@@ -2587,6 +2587,21 @@ div.logo p {
     text-decoration:none;
 }
 
+.main-content h1 a {
+    font-weight: normal; 
+    clear: both;
+    font-family: BevanRegular, ShantiRegular,'Lucida Sans Unicode', Arial, sans;
+    text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+    color:#555;
+    font-size: 25px; 
+    line-height: 1.3em; 
+    padding: 15px 0; 
+}
+
+.main-content h1 a:hover {
+    color: #0091e5;
+}
+
 .main-content a h1 {			/* Main content headings */
     -webkit-transition:all ease-out .5s;
     -moz-transition:all ease-out .5s;
