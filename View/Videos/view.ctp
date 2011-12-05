@@ -4,7 +4,7 @@
     <div class="post-item-single">
         <!-- Post Title -->
         <div class="post-title">
-            <a href="#"><h1><?php echo $video['Video']['title'] ?></h1></a>
+            <h1><?php echo $this->Html->link($video['Video']['title'], ''); ?></h1>
         </div>
         <!-- Post Entry -->
         <!-- Post Meta -->

@@ -94,8 +94,8 @@
             </div>
             <!--End Nav wrapper-->
         </div>
-        <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript" src="http://code.google.com/apis/gears/gears_init.js"></script>-->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="http://code.google.com/apis/gears/gears_init.js"></script>
         <!--End Nav container-->
         <!--Start Content Background-->
         <div class="content-background">
